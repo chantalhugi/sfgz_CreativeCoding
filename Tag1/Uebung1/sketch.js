@@ -11,10 +11,7 @@ function setup() {
 function draw() {
   background(0,104,139);
   noFill();
-
   stroke(233,150,122);
-
-
   fill(141,238,238);
   strokeWeight(10);
   ellipse(300,300,590,590);
@@ -27,11 +24,8 @@ function draw() {
   strokeWeight(6);
   ellipse(300,300,204,204);
 
-
-
   strokeWeight(8);
   ellipse(300,300,424,424);
-
 
 
   strokeWeight(8);
@@ -46,7 +40,8 @@ function draw() {
   line(300, 0, 300, 600);
   line(0, 300, 600, 300);
 
-  noFill();
+
+  stroke(139,28,98);
   strokeWeight(4);
   square(273, 273, 56);
 
