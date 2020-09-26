@@ -1,5 +1,5 @@
 function setup() {
-  createCanvas(800, 800);
+  createCanvas(1600, 800);
   background(255);
   strokeWeight(2);
   stroke(0);
@@ -8,31 +8,37 @@ function setup() {
 }
 
 function draw() {
+
   let stepsx = 200;
+  let stepsy = 400;
 
-  for (var x = 200; x<height; x+= steps) {
+  for (var x = 0; x<width; x+= stepsx) {
+    for (var y = 0; y<height; y+= stepsy) {
 
+  noFill();
   beginShape();
-  vertex(0, 0);
-  vertex(200, 0);
-  vertex(200, 400);
-  vertex(x, 400);
+  vertex(0+x, 0+y);
+  vertex(200+x, 0+y);
+  vertex(200+x, 400+y);
+  vertex(0+x, 400+y);
   endShape(CLOSE);
 
   fill('#1979a9');
-  triangle(0, 400, 100, 200, 200, 400);
-  triangle(0, 0, 100, 200, 200, 0);
+  triangle(0+x, 0+y, 100+x, 200+y, 200+x, 0+y);
+  triangle(0+x, 400+y, 100+x, 200+y, 200+x, 400+y);
 
   fill('#CEF6EC');
-  triangle(0, 400, 100, 300, 200, 400);
-  triangle(0, 0, 100, 100, 200, 0);
+  triangle(0+x, 400+y, 100+x, 300+y, 200+x, 400+y);
+  triangle(0+x, 0+y, 100+x, 100+y, 200+x, 0+y);
 
   fill('#042f66');
-  triangle(0, 100, 100, 200, 0, 300);
-  triangle(200, 100, 100, 200, 200, 300);
+  triangle(0+x, 100+y, 100+x, 200+y, 0+x, 300+y);
+  triangle(200+x, 100+y, 100+x, 200+y, 200+x, 300+y);
 
-  line(0, 200, 200, 200);
-  line(100, 100, 100, 300);
+  line(0+x, 200+y, 200+x, 200+y);
+  line(100+x, 100+y, 100+x, 300+y);
+
+}
 }
 
 }
