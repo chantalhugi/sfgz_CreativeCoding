@@ -24,7 +24,7 @@ function draw() {
   endShape(CLOSE);
 
   /*fill('#1979a9');*/
-  fill(random(10), 0, random(200));
+  fill(random(180), 0, random(200));
   triangle(0+x, 0+y, 100+x, 200+y, 200+x, 0+y);
   triangle(0+x, 400+y, 100+x, 200+y, 200+x, 400+y);
 

@@ -19,6 +19,6 @@ function draw() {
 
   for (let i = 1; i <= anz; i++) {
     strokeWeight(i);
-    rect(distanz * i, distanz * i, 100, 100);
+    triangle(30+distanz * i, 400+distanz * i, 50+distanz * i, 100+distanz * i, 300+distanz * i, 200+distanz * i);
   }
 }
