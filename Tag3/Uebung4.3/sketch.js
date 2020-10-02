@@ -3,11 +3,16 @@ let yoff = 1.0; // 2nd dimension of perlin noise
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  background('#d5e3e3');
+  colorMode(HSL);
+//  background('#d5e3e3');
 
 }
 
 function draw() {
+
+  let h=map(mouseX,0,width,200,300);
+  background(h,10,50);
+
 
   let stepsy = 500;
 
@@ -35,7 +40,7 @@ function draw() {
     vertex(x, y+y);
     // Increment x dimension for noise
     xoff += 0.1;
-    
+
 
   }
   }
