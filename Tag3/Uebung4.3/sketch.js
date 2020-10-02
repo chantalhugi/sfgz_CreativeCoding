@@ -1,15 +1,20 @@
 
-let yoff = 0.0; // 2nd dimension of perlin noise
+let yoff = 1.0; // 2nd dimension of perlin noise
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
+  background('#d5e3e3');
+
 }
 
 function draw() {
-  background('#d5e3e3');
+
+  let stepsy = 500;
+
 
   fill('#10adba');
   stroke('#E0FFFF');
+  strokeWeight(2);
   // We are going to draw a polygon out of the wave points
   beginShape();
 
@@ -18,7 +23,7 @@ function draw() {
 
   // Iterate over horizontal pixels
   for (let x = 0; x <= width; x += 10) {
-    // Calculate a y value according to noise, map to
+    for (let y = 0; y <height; y+= stepsy) {
 
     // Option #1: 2D Noise
     let y = map(noise(xoff, yoff), 0, 1, 200, 300);
@@ -27,9 +32,12 @@ function draw() {
     // let y = map(noise(xoff), 0, 1, 200,300);
 
     // Set the vertex
-    vertex(x, y);
+    vertex(x, y+y);
     // Increment x dimension for noise
-    xoff += 0.05;
+    xoff += 0.1;
+    
+
+  }
   }
   // increment y dimension for noise
   yoff += 0.01;
