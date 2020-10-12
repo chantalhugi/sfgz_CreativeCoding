@@ -19,7 +19,7 @@ function setup() {
 let x = [0, 100, 200, 300, 400, 700, 2200];
 let y = [, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
-let shiftY=0;
+let shiftY=20;
 
 
 
@@ -39,6 +39,6 @@ function draw() {
     shiftY+=0.5;
 
     if(shiftY > height){
-      shiftY=0;
+      shiftY=10;
     }
 }
