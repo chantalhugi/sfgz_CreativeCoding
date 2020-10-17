@@ -1,11 +1,13 @@
 var gui;
 
-var anz = 5;
-var distanz = 25;
+var anz = 3;
+var distanz = 1;
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+ createCanvas(windowWidth, windowHeight);
+// createCanvas (1920, 1080);
   noFill();
+  colorMode(RGB, 255, 255, 255, 1);
   gui = createGui('p5.gui');
   gui.addGlobals('anz', 'distanz');
   // only call draw when then gui is changed
@@ -21,7 +23,7 @@ function draw() {
 
 
   background(h, 79, 119);
-  strokeWeight(1);
+
 //  translate(0, -200)
 
   for (let i = 2; i <= anz; i++) {
@@ -29,7 +31,7 @@ function draw() {
 
   //  fill(b, 108, 166, 200);
 
-    stroke('#CCFFFF');
+
     /*
     beginShape();
     vertex(-10, 900);
@@ -52,15 +54,58 @@ function draw() {
     endShape()
 */
 
-
+stroke(255, 255, 255, 0.7);
+strokeWeight(8);
 beginShape();
-curveVertex(30, 100 +random (- 1 * distanz/5, distanz/5) + distanz * i);
-curveVertex(80, 20 +random (- 1 * distanz/5, distanz/5) + distanz * i);
-curveVertex(50, 100 +random (- 1 * distanz/5, distanz/5) + distanz * i);
-curveVertex(100, 80 +random (- 1 * distanz/5, distanz/5) + distanz * i);
-curveVertex(150, 100 +random (- 1 * distanz/5, distanz/5) + distanz * i);
-curveVertex(200, 10 +random (- 1 * distanz/5, distanz/5) + distanz * i);
+curveVertex(0, 0 +random (- 1 * distanz/2, distanz/2) - distanz * i);
+curveVertex(0, 450 +random (- 1 * distanz/2, distanz/5) - distanz * i);
+curveVertex(200, 250 +random (- 1 * distanz/2, distanz/2) - distanz * i);
+curveVertex(400, 500 +random (- 1 * distanz/2, distanz/2) - distanz * i);
+curveVertex(600, 220 +random (- 1 * distanz/2, distanz/2) - distanz * i);
+curveVertex(900, 520 +random (- 1 * distanz/2, distanz/2) - distanz * i);
+curveVertex(1050, 200 +random (- 1 * distanz/2, distanz/2) - distanz * i);
+curveVertex(1200, 590 +random (- 1 * distanz/2, distanz/2) - distanz * i);
+curveVertex(1450, 180 +random (- 1 * distanz/2, distanz/2) - distanz * i);
+curveVertex(1700, 450 +random (- 1 * distanz/2, distanz/2) - distanz * i);
+curveVertex(2000, 600 +random (- 1 * distanz/2, distanz/2) - distanz * i);
 endShape();
+
+
+
+
+stroke(255, 255, 255, 0.5);
+strokeWeight(6);
+beginShape();
+curveVertex(0, 0 +random (- 1 * distanz/2, distanz/2) - distanz * i);
+curveVertex(0, 650 +random (- 1 * distanz/2, distanz/5) - distanz * i);
+curveVertex(150, 400 +random (- 1 * distanz/2, distanz/2) - distanz * i);
+curveVertex(350, 600 +random (- 1 * distanz/2, distanz/2) - distanz * i);
+curveVertex(650, 350 +random (- 1 * distanz/2, distanz/2) - distanz * i);
+curveVertex(850, 620 +random (- 1 * distanz/2, distanz/2) - distanz * i);
+curveVertex(1100, 380 +random (- 1 * distanz/2, distanz/2) - distanz * i);
+curveVertex(1300, 550 +random (- 1 * distanz/2, distanz/2) - distanz * i);
+curveVertex(1500, 400 +random (- 1 * distanz/2, distanz/2) - distanz * i);
+curveVertex(1750, 500 +random (- 1 * distanz/2, distanz/2) - distanz * i);
+curveVertex(2100, 600 +random (- 1 * distanz/2, distanz/2) - distanz * i);
+endShape();
+
+
+
+
+stroke(255, 255, 255, 1);
+strokeWeight(10);
+beginShape();
+curveVertex(0, 0 +random (+ 1 * distanz/5, distanz/5) - distanz * i);
+curveVertex(0, 600 +random (+ 1 * distanz/5, distanz/5) - distanz * i);
+curveVertex(600, 390 +random (+ 1 * distanz/5, distanz/5) - distanz * i);
+curveVertex(1347, 700 +random (+ 1 * distanz/5, distanz/5) - distanz * i);
+curveVertex(1920, 450 +random (+ 1 * distanz/5, distanz/5) - distanz * i);
+curveVertex(2400, 600 +random (+ 1 * distanz/5, distanz/5) - distanz * i);
+endShape();
+
+
+
+
 
   }
 }
