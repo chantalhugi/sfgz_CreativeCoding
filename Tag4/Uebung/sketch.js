@@ -1,7 +1,7 @@
 var gui;
 
-var anz = 3;
-var distanz = 1;
+var anz = 5;
+var distanz = 10;
 
 function setup() {
  createCanvas(windowWidth, windowHeight);
@@ -22,7 +22,7 @@ function draw() {
     randomSeed(9);
 
 
-  background(h, 79, 119);
+  background(0, 19, 55);
 
 //  translate(0, -200)
 
@@ -54,8 +54,8 @@ function draw() {
     endShape()
 */
 
-stroke(255, 255, 255, 0.7);
-strokeWeight(8);
+stroke(255, 255, 255, 0.4);
+strokeWeight(4);
 beginShape();
 curveVertex(0, 0 +random (- 1 * distanz/3, distanz/3) - distanz * i);
 curveVertex(0, 450 +random (- 1 * distanz/3, distanz/3) - distanz * i);
@@ -73,34 +73,34 @@ endShape();
 
 
 
-stroke(255, 255, 255, 0.5);
+stroke(255, 255, 255, 0.6);
 strokeWeight(6);
 beginShape();
-curveVertex(0, 0 +random (- 1 * distanz/2, distanz/2) - distanz * i);
-curveVertex(0, 650 +random (- 1 * distanz/2, distanz/5) - distanz * i);
-curveVertex(150, 400 +random (- 1 * distanz/2, distanz/2) - distanz * i);
-curveVertex(350, 600 +random (- 1 * distanz/2, distanz/2) - distanz * i);
-curveVertex(650, 350 +random (- 1 * distanz/2, distanz/2) - distanz * i);
-curveVertex(850, 620 +random (- 1 * distanz/2, distanz/2) - distanz * i);
-curveVertex(1100, 380 +random (- 1 * distanz/2, distanz/2) - distanz * i);
-curveVertex(1300, 550 +random (- 1 * distanz/2, distanz/2) - distanz * i);
-curveVertex(1500, 400 +random (- 1 * distanz/2, distanz/2) - distanz * i);
-curveVertex(1750, 500 +random (- 1 * distanz/2, distanz/2) - distanz * i);
-curveVertex(2100, 600 +random (- 1 * distanz/2, distanz/2) - distanz * i);
+curveVertex(0, 0 +random (- 1 * distanz/2, distanz/2) - distanz * i - 10);
+curveVertex(0, 700 +random (- 1 * distanz/2, distanz/5) - distanz * i - 10);
+curveVertex(200, 450 +random (- 1 * distanz/2, distanz/2) - distanz * i- 10);
+curveVertex(350, 600 +random (- 1 * distanz/2, distanz/2) - distanz * i- 10);
+curveVertex(650, 350 +random (- 1 * distanz/2, distanz/2) - distanz * i - 10);
+curveVertex(850, 620 +random (- 1 * distanz/2, distanz/2) - distanz * i - 10);
+curveVertex(1100, 380 +random (- 1 * distanz/2, distanz/2) - distanz * i - 10);
+curveVertex(1300, 550 +random (- 1 * distanz/2, distanz/2) - distanz * i- 10);
+curveVertex(1500, 450 +random (- 1 * distanz/2, distanz/2) - distanz * i - 10);
+curveVertex(1750, 500 +random (- 1 * distanz/2, distanz/2) - distanz * i - 10);
+curveVertex(2000, 500 +random (- 1 * distanz/2, distanz/2) - distanz * i -10);
 endShape();
 
 
 
 
-stroke(255, 255, 255, 1);
-strokeWeight(10);
+stroke(255, 255, 255, 0.8);
+strokeWeight(8);
 beginShape();
-curveVertex(0, 0 +random (+ 1 * distanz/4, distanz/4) - distanz * i);
-curveVertex(0, 600 +random (+ 1 * distanz/4, distanz/4) - distanz * i);
-curveVertex(600, 390 +random (+ 1 * distanz/4, distanz/4) - distanz * i);
-curveVertex(1347, 700 +random (+ 1 * distanz/4, distanz/4) - distanz * i);
-curveVertex(1920, 450 +random (+ 1 * distanz/4, distanz/4) - distanz * i);
-curveVertex(2400, 600 +random (+ 1 * distanz/4, distanz/4) - distanz * i);
+curveVertex(0, 0 +random (+ 1 * distanz/4, distanz/2) - distanz * i);
+curveVertex(0, 600 +random (+ 1 * distanz/4, distanz/2) - distanz * i);
+curveVertex(600, 390 +random (+ 1 * distanz/4, distanz/2) - distanz * i);
+curveVertex(1347, 700 +random (+ 1 * distanz/4, distanz/2) - distanz * i);
+curveVertex(1920, 450 +random (+ 1 * distanz/4, distanz/2) - distanz * i);
+curveVertex(2400, 600 +random (+ 1 * distanz/4, distanz/2) - distanz * i);
 endShape();
 
 
