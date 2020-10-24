@@ -18,7 +18,7 @@ function setup() {
 
 function draw() {
 if (up == 0){
- teiler = teiler + 0.1; // Bewegung
+ teiler = teiler + 0.5; // Bewegung
   if (teiler >10) {
     up = 1;
 
@@ -27,7 +27,7 @@ if (up == 0){
 }
 
 else{
-  teiler = teiler - 0.1; // Bewegung
+  teiler = teiler - 0.5; // Bewegung
   if (teiler < 1) {
     up = 0;
 
@@ -133,3 +133,7 @@ translate (0, +200);
 pop ()
 
 }
+
+
+
+// bei teiler Windstarke einfügen von API
