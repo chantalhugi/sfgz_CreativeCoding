@@ -1,7 +1,5 @@
-let key = '06e280b15621fb57f14de8e91c05e79e'; // https://weatherstack.com/product -- dein key!
-
 var gui;
-var wind = 0;
+var windstaerke = 0;
 let distanz = 15;
 
 var teiler = 3;
@@ -9,24 +7,25 @@ let up = 5;
 
 let input, button;
 
+let key = '06e280b15621fb57f14de8e91c05e79e'; // https://weatherstack.com/product -- dein key!
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  let url = 'https://api.weatherstack.com/current?access_key=' + key + '&query=Zürich';
+  let url = 'https://api.weatherstack.com/current?access_key=' + key + '&query=Zürich'; //Achtung gratis key unterstützt SSL nicht
   loadJSON(url, gotWeather);
 
   noFill();
   colorMode(RGB, 255, 255, 255, 1);
 
   gui = createGui('p5.gui');
-  gui.addGlobals('wind');
+  gui.addGlobals('windstaerke');
 
 
   input = createInput();
   input.position(20, height - 50);
-  button = createButton('SUBMIT');
+  button = createButton('Ort eingeben und staunen!');
   button.position(input.x + input.width + 10, height - 50);
-  button.mousePressed(reloadJson); 
+  button.mousePressed(reloadJson);
 
 }
 
@@ -49,7 +48,7 @@ function draw() {
     }
   }
 
-  for (let i = 2; i <= wind; i++) {
+  for (let i = 2; i <= windstaerke; i++) {
 
     welle(i)
     welle4(i)
@@ -171,8 +170,8 @@ function welle5(i) {
 
 
 function gotWeather(weather) {
-  wind = weather.current.wind_speed; // Angaben in km!
-  console.log(wind)
+  windstaerke = weather.current.wind_speed; // Angaben in km!
+  console.log(distanz)
 
 }
 
