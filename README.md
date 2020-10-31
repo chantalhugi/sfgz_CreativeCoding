@@ -2,7 +2,7 @@
 
 ### Einstieg
 Ganz zu Beginn des Moduls wurde mit Hilfe von verschiedenen Übungen uns das Coding-Programm "p5.js" näher gebracht und aufgezeigt was für das spätere Projekt alles verwendet werden kann.
-Für das Projekt selbst sollte am Ende ein Aspekt vom Wetter (von einer API) eingebunden werden.
+Für das Projekt selbst sollte am Ende ein Aspekt vom Wetter (von einer externen API) eingebunden werden. 
 
 ### Ideenfindung
 Um überhaupt zu wissen was als Projekt in Frage kommt, wurde ein Moodboard erstellt und anschliessend vor einer kleinen Gruppen präsentiert. Die erhaltenen Feedbacks haben dabei geholfen die eigenen Idee zu formen oder nochmals zu überdenken.
