@@ -9,6 +9,8 @@ let input, button;
 
 let key = '06e280b15621fb57f14de8e91c05e79e'; // https://weatherstack.com/product -- dein key!
 
+// API einbinden //
+
 function setup() {
   createCanvas(windowWidth, windowHeight);
   let url = 'https://api.weatherstack.com/current?access_key=' + key + '&query=Zürich'; //Achtung gratis key unterstützt SSL nicht
@@ -17,9 +19,11 @@ function setup() {
   noFill();
   colorMode(RGB, 255, 255, 255, 1);
 
+
   gui = createGui('p5.gui');
   gui.addGlobals('windstaerke');
 
+  // Button für Ortseingabe //
 
   input = createInput();
   input.position(20, height - 50);
@@ -33,20 +37,26 @@ function draw() {
   background(0, 44, 107);
   randomSeed(9);
 
+  // Bewegung nach oben //
+
   if (up == 0) {
-    teiler = teiler + 0.1; // Bewegung
+    teiler = teiler + 0.1;
     if (teiler > 20) {
       up = 1;
 
     }
 
+    // Bewegung nach unten //
+
   } else {
-    teiler = teiler - 0.1; // Bewegung
+    teiler = teiler - 0.1;
     if (teiler < 8) {
       up = 0;
 
     }
   }
+
+  // Wellen (verpackt) //
 
   for (let i = 2; i <= windstaerke; i++) {
 
@@ -58,6 +68,7 @@ function draw() {
 
   }
 }
+// Wellen Angaben //
 
 function welle(i) {
   push()
@@ -168,6 +179,7 @@ function welle5(i) {
 
 }
 
+// Angaben API //
 
 function gotWeather(weather) {
   windstaerke = weather.current.wind_speed; // Angaben in km!
